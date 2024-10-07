@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colors</title>
+</head>
+<body>
+    <div>
+        <h1>We seeing colors boi!</h1>
+        <input type="text" name="addColor" id="addColor" placeholder="Enter a color">
+        <button id="addColorButton" onclick="addColor()">Add Color</button>
+        
+        <table>
+            <% colors.forEach((color) => { %>
+                <tr>
+                    <td><%= color.Name %></td>
+                    <td> <button onclick="deleteColor('<%= color.Name %>')">Delete</button></td>
+                </tr>
+            <% }) %>
+            <tr>
+                
+            </tr>
+        </table>
+
+
+    </div>
+
+    <script src="/javascripts/crudColors.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js" integrity="sha512-DdX/YwF5e41Ok+AI81HI8f5/5UsoxCVT9GKYZRIzpLxb8Twz4ZwPPX+jQMwMhNQ9b5+zDEefc+dcvQoPWGNZ3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>

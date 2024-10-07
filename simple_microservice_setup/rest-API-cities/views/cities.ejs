@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cities</title>
+</head>
+<body>
+    <h1>We working</h1>
+    <input type="text" name="addCity" id="addCity" placeholder="Add a city">
+    <button id="addCityButton" onclick="addCity()">Add City</button>
+
+    <table>
+        <% cities.forEach((city) => { %>
+            <tr>
+                <td> <%= city.Name %></td>
+                <td> <button onclick="deleteCity('<%= city.Name %>')">Delete</button> </td>
+            </tr>
+        <% }) %>
+    </table>
+
+
+    <script src="/javascripts/crudCities.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js" integrity="sha512-DdX/YwF5e41Ok+AI81HI8f5/5UsoxCVT9GKYZRIzpLxb8Twz4ZwPPX+jQMwMhNQ9b5+zDEefc+dcvQoPWGNZ3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
